@@ -169,6 +169,75 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transform = 'translateY(0) rotateY(0deg)';
         });
     });
+    // Modal functionality for activity images
+    createImageModal();
+    
+    function createImageModal() {
+        // Create modal HTML
+        const modal = document.createElement('div');
+        modal.className = 'modal';
+        modal.innerHTML = `
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modal-img">
+        `;
+        document.body.appendChild(modal);
+        
+        const modalImg = document.getElementById("modal-img");
+        const closeBtn = document.querySelector('.close');
+        
+        // Add click events to activity overlays
+        document.querySelectorAll('.activity-overlay').forEach(overlay => {
+            overlay.addEventListener('click', function() {
+                const img = this.parentElement.querySelector('img');
+                if (img) {
+                    modal.style.display = "block";
+                    modalImg.src = img.src;
+                }
+            });
+        });
+        
+        // Close modal
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = "none";
+        });
+        
+        // Close modal when clicking outside
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    }
+
+    // Counter animation for total hours
+    const hoursNumber = document.querySelector('.hours-number');
+    if (hoursNumber) {
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(hoursNumber, 60, 2000);
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+        observer.observe(hoursNumber);
+    }
+    
+    function animateCounter(element, target, duration) {
+        let start = 0;
+        const increment = target / (duration / 16);
+        
+        function updateCounter() {
+            start += increment;
+            if (start < target) {
+                element.textContent = Math.floor(start);
+                requestAnimationFrame(updateCounter);
+            } else {
+                element.textContent = target;
+            }
+        }
+        updateCounter();
+    }
 
     // Animate elements on scroll
     function animateOnScroll() {
