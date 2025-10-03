@@ -10,28 +10,75 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <div class="logo">RBL</div>
+            <div class="logo">
+                <span class="logo-bracket">&lt;</span>
+                RBL
+                <span class="logo-bracket">/&gt;</span>
+            </div>
             <ul class="nav-links">
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
                 <li><a href="#parcours">Parcours</a></li>
                 <li><a href="#activites">Activités</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="mobile-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="accueil" class="hero">
         <div class="hero-content">
-            <div class="glitch-wrapper">
-                <h1 class="glitch" data-text="Rayane Ben Lhaj">Rayane Ben Lhaj</h1>
+            <div class="hero-tag">Bienvenue sur mon portfolio</div>
+            <h1 class="hero-title">
+                <span class="hero-greeting">Je suis</span>
+                <span class="hero-name">Rayane Ben Lhaj</span>
+            </h1>
+            <p class="hero-subtitle">Étudiant en Technologie de l'Informatique</p>
+            <p class="hero-description">3ème année de Bachelier • EPHEC Louvain-la-Neuve</p>
+            <div class="hero-specialties">
+                <span class="specialty-item">Full Stack Development</span>
+                <span class="specialty-divider">•</span>
+                <span class="specialty-item">Administration Système</span>
+                <span class="specialty-divider">•</span>
+                <span class="specialty-item">Réseaux & IoT</span>
             </div>
-            <p class="subtitle">Étudiant en Technologie de l'Informatique</p>
-            <p class="description">3ème année de Bachelier | EPHEC Louvain-la-Neuve</p>
             <div class="hero-buttons">
-                <a href="#competences" class="btn btn-primary">Découvrir mon profil</a>
-                <a href="#contact" class="btn btn-secondary">Me contacter</a>
+                <a href="#projets" class="btn btn-primary">
+                    <span>Voir mes projets</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span>Me contacter</span>
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="code-window">
+                <div class="window-header">
+                    <div class="window-buttons">
+                        <span class="btn-close"></span>
+                        <span class="btn-minimize"></span>
+                        <span class="btn-maximize"></span>
+                    </div>
+                    <div class="window-title">skills.js</div>
+                </div>
+                <div class="window-content">
+                    <pre><code><span class="code-keyword">const</span> <span class="code-variable">skills</span> = {
+  <span class="code-property">frontend</span>: [<span class="code-string">'React'</span>, <span class="code-string">'HTML/CSS'</span>, <span class="code-string">'JavaScript'</span>],
+  <span class="code-property">backend</span>: [<span class="code-string">'Node.js'</span>, <span class="code-string">'Express'</span>, <span class="code-string">'MongoDB'</span>],
+  <span class="code-property">systems</span>: [<span class="code-string">'Linux'</span>, <span class="code-string">'Docker'</span>, <span class="code-string">'C'</span>],
+  <span class="code-property">network</span>: [<span class="code-string">'CCNA'</span>, <span class="code-string">'Cisco'</span>],
+  <span class="code-property">iot</span>: [<span class="code-string">'Python'</span>, <span class="code-string">'Raspberry Pi'</span>, <span class="code-string">'ESP32'</span>]
+};</code></pre>
+                </div>
             </div>
         </div>
         <div class="floating-shapes">
@@ -39,77 +86,213 @@
             <div class="shape shape-2"></div>
             <div class="shape shape-3"></div>
         </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-arrow"></div>
+        </div>
     </section>
 
     <!-- Compétences Section -->
     <section id="competences" class="competences">
         <div class="container">
-            <h2 class="section-title">Mes Compétences</h2>
+            <div class="section-header">
+                <span class="section-tag">Stack Technique</span>
+                <h2 class="section-title">Compétences & Technologies</h2>
+                <p class="section-description">Un aperçu complet de mes compétences techniques acquises durant ma formation</p>
+            </div>
             <div class="competences-grid">
                 <div class="competence-card">
-                    <div class="card-icon">💻</div>
-                    <h3>Développement Web</h3>
-                    <div class="skills-list">
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">CSS</span>
-                        <span class="skill-tag">JavaScript</span>
+                    <div class="card-header">
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18"/>
+                        </svg>
+                        <h3>Développement Web</h3>
                     </div>
-                    <p>Maîtrise du développement web front-end avec les technologies essentielles</p>
+                    <p class="card-description">Création d'interfaces utilisateur modernes et responsive avec les standards du web</p>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">HTML5</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="competence-card">
-                    <div class="card-icon">🚀</div>
-                    <h3>Web Applications</h3>
-                    <div class="skills-list">
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">Express</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Node.js</span>
+                    <div class="card-header">
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/>
+                            <path d="M8 21h8M12 17v4"/>
+                        </svg>
+                        <h3>Stack MERN</h3>
                     </div>
-                    <p>Stack MERN pour des applications web complètes et performantes</p>
+                    <p class="card-description">Développement d'applications web full-stack avec le stack MERN moderne</p>
+                    <div class="tech-grid">
+                        <span class="tech-badge">MongoDB</span>
+                        <span class="tech-badge">Express.js</span>
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Node.js</span>
+                    </div>
                 </div>
 
                 <div class="competence-card">
-                    <div class="card-icon">🖥️</div>
-                    <h3>Systèmes & Réseaux</h3>
-                    <div class="skills-list">
-                        <span class="skill-tag">Linux</span>
-                        <span class="skill-tag">C</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">YAML</span>
-                        <span class="skill-tag">VPS</span>
+                    <div class="card-header">
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="8" rx="2"/>
+                            <rect x="2" y="14" width="20" height="8" rx="2"/>
+                            <path d="M6 6h.01M6 18h.01"/>
+                        </svg>
+                        <h3>Administration Système</h3>
                     </div>
-                    <p>Administration système, virtualisation et gestion d'infrastructures</p>
+                    <p class="card-description">Gestion et configuration de systèmes Linux, virtualisation et déploiement</p>
+                    <div class="tech-grid">
+                        <span class="tech-badge">Linux</span>
+                        <span class="tech-badge">C</span>
+                        <span class="tech-badge">Docker</span>
+                        <span class="tech-badge">YAML</span>
+                        <span class="tech-badge">VPS</span>
+                    </div>
                 </div>
 
                 <div class="competence-card">
-                    <div class="card-icon">🌐</div>
-                    <h3>Réseaux</h3>
-                    <div class="skills-list">
-                        <span class="skill-tag">CCNA 1</span>
-                        <span class="skill-tag">Cisco Packet Tracer</span>
+                    <div class="card-header">
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            <path d="M2 12h20"/>
+                        </svg>
+                        <h3>Réseaux & Infrastructure</h3>
                     </div>
-                    <p>Configuration et simulation de réseaux informatiques</p>
+                    <p class="card-description">Configuration et dépannage de réseaux informatiques avec certification CCNA</p>
+                    <div class="tech-grid">
+                        <span class="tech-badge certified">CCNA 1</span>
+                        <span class="tech-badge">Cisco Packet Tracer</span>
+                        <span class="tech-badge">Routing & Switching</span>
+                    </div>
                 </div>
 
                 <div class="competence-card">
-                    <div class="card-icon">📡</div>
-                    <h3>Télécommunications</h3>
-                    <div class="skills-list">
-                        <span class="skill-tag">Traitement de signaux</span>
+                    <div class="card-header">
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                        <h3>Télécommunications</h3>
                     </div>
-                    <p>Analyse et manipulation de signaux numériques</p>
+                    <p class="card-description">Traitement et analyse de signaux numériques et analogiques</p>
+                    <div class="tech-grid">
+                        <span class="tech-badge">Traitement du Signal</span>
+                        <span class="tech-badge">Analyse Spectrale</span>
+                    </div>
                 </div>
 
                 <div class="competence-card">
-                    <div class="card-icon">⚡</div>
-                    <h3>Électronique & IoT</h3>
-                    <div class="skills-list">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Raspberry Pi</span>
-                        <span class="skill-tag">ESP32</span>
+                    <div class="card-header">
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                        <h3>Électronique & IoT</h3>
                     </div>
-                    <p>Projets embarqués et objets connectés</p>
+                    <p class="card-description">Prototypage et programmation de systèmes embarqués et objets connectés</p>
+                    <div class="tech-grid">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Raspberry Pi</span>
+                        <span class="tech-badge">ESP32</span>
+                        <span class="tech-badge">Arduino</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets Section -->
+    <section id="projets" class="projets">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Réalisations</span>
+                <h2 class="section-title">Projets & Expériences</h2>
+                <p class="section-description">Exemples de mes réalisations académiques et personnelles</p>
+            </div>
+            <div class="projets-grid">
+                <div class="projet-card featured">
+                    <div class="projet-image">
+                        <div class="projet-overlay">
+                            <span class="projet-status">En cours</span>
+                        </div>
+                    </div>
+                    <div class="projet-content">
+                        <h3>Application Web MERN</h3>
+                        <p>Développement d'une application full-stack utilisant MongoDB, Express, React et Node.js avec authentification et gestion de données en temps réel</p>
+                        <div class="projet-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Express</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projet-card">
+                    <div class="projet-image">
+                        <div class="projet-overlay">
+                            <span class="projet-status completed">Complété</span>
+                        </div>
+                    </div>
+                    <div class="projet-content">
+                        <h3>Infrastructure Réseau Virtuelle</h3>
+                        <p>Configuration d'un réseau d'entreprise complexe avec VLANs, routage inter-VLAN et sécurité sur Cisco Packet Tracer</p>
+                        <div class="projet-tags">
+                            <span>CCNA</span>
+                            <span>Cisco</span>
+                            <span>Networking</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projet-card">
+                    <div class="projet-image">
+                        <div class="projet-overlay">
+                            <span class="projet-status completed">Complété</span>
+                        </div>
+                    </div>
+                    <div class="projet-content">
+                        <h3>Système Embarqué IoT</h3>
+                        <p>Création d'un système de monitoring environnemental avec ESP32, capteurs et interface web pour la visualisation des données</p>
+                        <div class="projet-tags">
+                            <span>Python</span>
+                            <span>ESP32</span>
+                            <span>IoT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projet-card">
+                    <div class="projet-image">
+                        <div class="projet-overlay">
+                            <span class="projet-status completed">Complété</span>
+                        </div>
+                    </div>
+                    <div class="projet-content">
+                        <h3>Administration Linux & Docker</h3>
+                        <p>Déploiement et gestion d'applications containerisées sur VPS Linux avec Docker Compose et orchestration</p>
+                        <div class="projet-tags">
+                            <span>Linux</span>
+                            <span>Docker</span>
+                            <span>DevOps</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -118,30 +301,51 @@
     <!-- Parcours Section -->
     <section id="parcours" class="parcours">
         <div class="container">
-            <h2 class="section-title">Mon Parcours</h2>
+            <div class="section-header">
+                <span class="section-tag">Mon Parcours</span>
+                <h2 class="section-title">Formation & Expérience</h2>
+            </div>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
                     <div class="timeline-content">
+                        <span class="timeline-date">2024 - 2025</span>
                         <h3>3ème Année de Bachelier</h3>
-                        <p class="timeline-date">2024 - 2025</p>
-                        <p>Technologie de l'Informatique à l'EPHEC Louvain-la-Neuve</p>
+                        <p class="timeline-location">EPHEC Louvain-la-Neuve</p>
+                        <p class="timeline-description">Technologie de l'Informatique - Spécialisation en développement et systèmes & réseaux</p>
+                        <div class="timeline-highlights">
+                            <span>Full Stack Development</span>
+                            <span>Administration Système</span>
+                            <span>Réseaux & Sécurité</span>
+                        </div>
                     </div>
                 </div>
+
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
                     <div class="timeline-content">
+                        <span class="timeline-date">2024</span>
                         <h3>Certification CCNA 1</h3>
-                        <p class="timeline-date">2024</p>
-                        <p>Introduction aux réseaux Cisco</p>
+                        <p class="timeline-location">Cisco Networking Academy</p>
+                        <p class="timeline-description">Introduction aux réseaux - Fondamentaux du networking et configuration Cisco</p>
                     </div>
                 </div>
+
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
                     <div class="timeline-content">
-                        <h3>Job Étudiant</h3>
-                        <p class="timeline-date">En cours</p>
-                        <p>Employé dans un centre sportif</p>
+                        <span class="timeline-date">En cours</span>
+                        <h3>Employé Centre Sportif</h3>
+                        <p class="timeline-location">Job Étudiant</p>
+                        <p class="timeline-description">Accueil, gestion et service client dans un environnement sportif dynamique</p>
                     </div>
                 </div>
             </div>
@@ -151,87 +355,145 @@
     <!-- Activités Extra-scolaires Section -->
     <section id="activites" class="activites">
         <div class="container">
-            <h2 class="section-title">Activités Extra-scolaires</h2>
-            <div class="hours-counter">
-                <div class="counter-display">
-                    <span class="counter-number" id="hoursCounter">0</span>
-                    <span class="counter-label">/ 60 heures</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" id="progressFill"></div>
+            <div class="section-header">
+                <span class="section-tag">60 heures requises</span>
+                <h2 class="section-title">Activités Extra-scolaires</h2>
+                <p class="section-description">Suivi de mon engagement dans des activités sportives, professionnelles et académiques</p>
+            </div>
+
+            <div class="hours-tracker">
+                <div class="tracker-header">
+                    <div class="tracker-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" id="completedHours">2</span>
+                            <span class="stat-label">Heures complétées</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="remainingHours">58</span>
+                            <span class="stat-label">Heures restantes</span>
+                        </div>
+                    </div>
+                    <div class="progress-circle">
+                        <svg viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" class="progress-bg"/>
+                            <circle cx="50" cy="50" r="45" class="progress-bar" id="circularProgress"/>
+                        </svg>
+                        <div class="progress-text">
+                            <span class="progress-percentage" id="percentage">3%</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             
             <div class="activites-grid">
-                <div class="activite-card">
-                    <div class="activite-header">
-                        <span class="activite-icon">🥊</span>
+                <div class="activite-card sport">
+                    <div class="activite-icon-wrapper">
+                        <svg class="activite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                    </div>
+                    <div class="activite-content">
                         <h3>Boxe</h3>
-                    </div>
-                    <p class="activite-description">Entraînement régulier de boxe pour maintenir une condition physique optimale et développer la discipline</p>
-                    <div class="activite-hours">
-                        <span class="hours-badge">Sport</span>
+                        <p>Entraînement régulier pour maintenir une condition physique optimale et développer discipline et persévérance</p>
+                        <div class="activite-meta">
+                            <span class="activite-category sport-cat">Sport</span>
+                            <span class="activite-status ongoing">En cours</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="activite-card">
-                    <div class="activite-header">
-                        <span class="activite-icon">🏐</span>
+                <div class="activite-card sport">
+                    <div class="activite-icon-wrapper">
+                        <svg class="activite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M2 12h20"/>
+                        </svg>
+                    </div>
+                    <div class="activite-content">
                         <h3>Volley-ball</h3>
-                    </div>
-                    <p class="activite-description">Pratique du volleyball en équipe, développement de l'esprit d'équipe et de la coordination</p>
-                    <div class="activite-hours">
-                        <span class="hours-badge">Sport</span>
-                    </div>
-                </div>
-
-                <div class="activite-card">
-                    <div class="activite-header">
-                        <span class="activite-icon">💼</span>
-                        <h3>Centre Sportif</h3>
-                    </div>
-                    <p class="activite-description">Job étudiant dans un centre sportif - Accueil, gestion et service client</p>
-                    <div class="activite-hours">
-                        <span class="hours-badge">Job étudiant</span>
+                        <p>Pratique en équipe développant la coordination, l'esprit d'équipe et les compétences en communication</p>
+                        <div class="activite-meta">
+                            <span class="activite-category sport-cat">Sport</span>
+                            <span class="activite-status ongoing">En cours</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="activite-card completed">
-                    <div class="activite-header">
-                        <span class="activite-icon">🔌</span>
-                        <h3>Exercice de Câblage</h3>
+                <div class="activite-card work">
+                    <div class="activite-icon-wrapper">
+                        <svg class="activite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2"/>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                        </svg>
                     </div>
-                    <p class="activite-description">Atelier pratique de câblage réseau à l'EPHEC</p>
-                    <div class="activite-hours">
-                        <span class="hours-badge">2h - EPHEC</span>
+                    <div class="activite-content">
+                        <h3>Employé Centre Sportif</h3>
+                        <p>Expérience professionnelle en service client, gestion et accueil dans un environnement dynamique</p>
+                        <div class="activite-meta">
+                            <span class="activite-category work-cat">Job Étudiant</span>
+                            <span class="activite-status ongoing">En cours</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="activite-card academic completed">
+                    <div class="activite-icon-wrapper">
+                        <svg class="activite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                    </div>
+                    <div class="activite-content">
+                        <h3>Exercice de Câblage Réseau</h3>
+                        <p>Atelier pratique de câblage structuré et configuration réseau à l'EPHEC</p>
+                        <div class="activite-meta">
+                            <span class="activite-category academic-cat">EPHEC • 2h</span>
+                            <span class="activite-status completed-status">Complété</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="activite-card upcoming">
-                    <div class="activite-header">
-                        <span class="activite-icon">💡</span>
+                    <div class="activite-icon-wrapper">
+                        <svg class="activite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                        </svg>
+                    </div>
+                    <div class="activite-content">
                         <h3>Hackathons</h3>
-                    </div>
-                    <p class="activite-description">Participation à venir à des hackathons et événements tech</p>
-                    <div class="activite-hours">
-                        <span class="hours-badge">À venir</span>
+                        <p>Participation prévue à des événements de développement intensif et compétitions de programmation</p>
+                        <div class="activite-meta">
+                            <span class="activite-category event-cat">Événement Tech</span>
+                            <span class="activite-status planned">Planifié</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="activite-card upcoming">
-                    <div class="activite-header">
-                        <span class="activite-icon">🎤</span>
-                        <h3>Conférences Tech</h3>
+                    <div class="activite-icon-wrapper">
+                        <svg class="activite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
                     </div>
-                    <p class="activite-description">Participation prévue à des conférences et événements technologiques</p>
-                    <div class="activite-hours">
-                        <span class="hours-badge">À venir</span>
+                    <div class="activite-content">
+                        <h3>Conférences Technologiques</h3>
+                        <p>Participation à des conférences et talks sur les nouvelles technologies et tendances IT</p>
+                        <div class="activite-meta">
+                            <span class="activite-category event-cat">Conférence</span>
+                            <span class="activite-status planned">Planifié</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="info-box">
-                <p>💡 <strong>Note :</strong> Les heures restantes seront complétées au cours de l'année académique par des hackathons, conférences techniques et autres activités professionnalisantes.</p>
+            <div class="info-banner">
+                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 16v-4M12 8h.01"/>
+                </svg>
+                <p>Les heures restantes seront complétées tout au long de l'année académique via la participation à des hackathons, conférences techniques, ateliers spécialisés et autres activités de développement professionnel.</p>
             </div>
         </div>
     </section>
@@ -239,24 +501,75 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Me Contacter</h2>
+            <div class="section-header">
+                <span class="section-tag">Travaillons ensemble</span>
+                <h2 class="section-title">Me Contacter</h2>
+                <p class="section-description">N'hésitez pas à me contacter pour discuter d'opportunités de stage, de projets ou de collaboration</p>
+            </div>
+            
             <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Restons en contact</h3>
-                    <p>N'hésitez pas à me contacter pour toute opportunité de stage, projet ou collaboration.</p>
-                    <div class="contact-links">
-                        <a href="mailto:rayanebenlhaj@gmail.com" class="contact-link">
-                            <span class="contact-icon">📧</span>
-                            <span>rayanebenlhaj@gmail.com</span>
-                        </a>
-                        <a href="https://linkedin.com" class="contact-link" target="_blank">
-                            <span class="contact-icon">💼</span>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="https://github.com" class="contact-link" target="_blank">
-                            <span class="contact-icon">👨‍💻</span>
-                            <span>GitHub</span>
-                        </a>
+                <div class="contact-grid">
+                    <a href="mailto:rayane.benlhaj@example.com" class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                <path d="M22 7l-10 7L2 7"/>
+                            </svg>
+                        </div>
+                        <h3>Email</h3>
+                        <p>rayane.benlhaj@example.com</p>
+                        <span class="contact-arrow">→</span>
+                    </a>
+
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <p>Profil professionnel</p>
+                        <span class="contact-arrow">→</span>
+                    </a>
+
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                        </div>
+                        <h3>GitHub</h3>
+                        <p>Projets & code source</p>
+                        <span class="contact-arrow">→</span>
+                    </a>
+                </div>
+
+                <div class="cta-box">
+                    <h3>Disponible pour</h3>
+                    <div class="cta-items">
+                        <div class="cta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2"/>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                            </svg>
+                            <span>Stages</span>
+                        </div>
+                        <div class="cta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <polyline points="2 17 12 22 22 17"/>
+                                <polyline points="2 12 12 17 22 12"/>
+                            </svg>
+                            <span>Projets collaboratifs</span>
+                        </div>
+                        <div class="cta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                            <span>Opportunités professionnelles</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -266,10 +579,38 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Rayane Ben Lhaj - Étudiant à l'EPHEC Louvain-la-Neuve</p>
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <span class="logo-bracket">&lt;</span>
+                        RBL
+                        <span class="logo-bracket">/&gt;</span>
+                    </div>
+                    <p>Étudiant en Technologie de l'Informatique</p>
+                    <p>EPHEC Louvain-la-Neuve</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <a href="#accueil">Accueil</a>
+                        <a href="#competences">Compétences</a>
+                        <a href="#projets">Projets</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>À propos</h4>
+                        <a href="#parcours">Parcours</a>
+                        <a href="#activites">Activités</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rayane Ben Lhaj. Tous droits réservés.</p>
+                <p class="footer-made">Conçu et développé avec passion</p>
+            </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
